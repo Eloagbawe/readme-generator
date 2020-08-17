@@ -20,7 +20,7 @@ rl.question(questions.name, function(name) {
                     fs.open("./README.md", "w", (err, fd) => {
                         if (err) throw err;   
        
-                        fs.writeFile("./README.md", `# :information_source:${questions.name} \n${name}\n# :information_source:${questions.project} \n${project}\n# :memo:${questions.description} \n${description}\n# :black_nib:${questions.version} \n${version}\n# :black_nib:${questions.language} \n${language}`,(err, data) =>{
+                        fs.writeFile("./README.md", `# ${questions.name} \n${name}\n# ${questions.project} \n${project}\n# ${questions.description} :memo: \n${description}\n# ${questions.version} \n${version}\n# ${questions.language} \n${language}`,(err, data) =>{
                             if (err) throw err;
                             console.log("README saved!");
        
